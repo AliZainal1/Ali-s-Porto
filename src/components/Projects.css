@@ -1,0 +1,187 @@
+/* Projects.css */
+
+.projects-section {
+    padding: 60px 20px;
+    background-image: url(Foto7.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.projects-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-header {
+    display: flex;
+    align-items: flex-start; /* Aligns content to the top */
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.project-icon {
+    font-size: 2.5rem;
+    padding: 15px;
+    background-color: #0083b0;
+    color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    flex-shrink: 0; /* Prevents the icon from shrinking */
+}
+
+.project-card:hover .project-icon {
+    background-color: #00b4db;
+    transform: scale(1.2);
+}
+
+.project-title-container {
+    flex-grow: 1; /* Allows the text container to grow */
+}
+
+.project-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    line-height: 1.2; /* Improves line spacing */
+}
+
+.project-location-duration {
+    font-size: 1rem;
+    color: #777;
+    margin: 5px 0 15px; /* Adds consistent margin around location text */
+    line-height: 1.4; /* Improves readability */
+}
+
+.project-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: auto; 
+    flex-grow: 1;
+    text-align: justify; /* Ensures text is evenly spaced */
+}
+
+.project-button {
+    background-color: #00b4db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: center; 
+    margin-top: 20px; 
+}
+
+.project-button:hover {
+    background-color: #0083b0;
+    transform: scale(1.05);
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
+    .projects-title {
+        font-size: 2.5rem; /* Kurangi ukuran font */
+    }
+
+    .projects-grid {
+        gap: 20px; /* Kurangi gap untuk tablet */
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Sesuaikan lebar kolom untuk tablet */
+    }
+
+    .project-card {
+        padding: 20px; /* Kurangi padding untuk layar tablet */
+    }
+
+    .project-title {
+        font-size: 1.6rem; /* Kurangi ukuran font */
+    }
+
+    .project-icon {
+        font-size: 2rem; /* Kurangi ukuran ikon */
+        padding: 10px; /* Kurangi padding ikon */
+    }
+
+    .project-description {
+        font-size: 0.9rem; /* Kurangi ukuran font */
+        line-height: 1.5; /* Sesuaikan line-height */
+    }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+    .projects-section {
+        padding: 40px 10px; /* Kurangi padding pada layar ponsel */
+    }
+
+    .projects-title {
+        font-size: 2rem; /* Kurangi ukuran font lebih kecil */
+    }
+
+    .projects-grid {
+        gap: 15px; /* Kurangi gap lebih kecil untuk ponsel */
+        grid-template-columns: 1fr; /* Satu kolom untuk tampilan ponsel */
+    }
+
+    .project-card {
+        padding: 15px; /* Kurangi padding lebih kecil */
+    }
+
+    .project-title {
+        font-size: 1.4rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .project-location-duration {
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .project-description {
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk ponsel */
+        line-height: 1.4; /* Sesuaikan line-height lebih kecil */
+    }
+
+    .project-button {
+        padding: 8px 15px; /* Kurangi padding tombol untuk ponsel */
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk tombol */
+    }
+}

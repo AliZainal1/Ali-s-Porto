@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+  background-image: url(Foto7.jpg);
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact-me-section {
+  background: linear-gradient(145deg, #e3f2fd, #f3e5f5);
+  padding: 50px 30px;
+  text-align: center;
+  border-radius: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-me-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.contact-title {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.contact-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #007bff;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.contact-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 100%; /* Ensures the form doesn't exceed the container width */
+  padding: 0px; /* Adds padding to the sides */
+}
+
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Ubah dari 500px ke 100% untuk responsivitas */
+  padding: 10px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  background-color: #e7f0ff;
+  outline: none;
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.2);
+}
+
+.focus-border {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.4s ease, left 0.4s ease;
+}
+
+.form-group input:focus ~ .focus-border,
+.form-group textarea:focus ~ .focus-border {
+  width: 100%;
+  left: 0;
+}
+
+.send-button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.send-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-links {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #777;
+  transition: color 0.3s ease;
+}
+
+.contact-links a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 700;
+  margin: 0 5px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.contact-links a:hover {
+  color: #0056b3;
+  text-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
+  .contact-me-section {
+    padding: 30px 20px; /* Kurangi padding pada layar tablet */
+    max-width: 90%; /* Kurangi lebar maksimal */
+  }
+
+  .contact-title {
+    font-size: 2.4rem; /* Kurangi ukuran font */
+  }
+
+  .contact-subtitle {
+    font-size: 1rem; /* Kurangi ukuran font */
+  }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+  .contact-me-section {
+    padding: 20px 15px; /* Kurangi padding pada layar ponsel */
+    max-width: 95%; /* Maksimalkan lebar pada ponsel */
+  }
+
+  .contact-title {
+    font-size: 2rem; /* Kurangi ukuran font lebih kecil */
+  }
+
+  .contact-subtitle {
+    font-size: 0.9rem; /* Kurangi ukuran font lebih kecil */
+  }
+
+  .send-button {
+    padding: 10px 30px; /* Kurangi padding tombol untuk ponsel */
+    font-size: 0.9rem; /* Ukuran font lebih kecil untuk tombol */
+  }
+}

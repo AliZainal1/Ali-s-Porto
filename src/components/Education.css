@@ -1,0 +1,298 @@
+.education-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan secara horizontal */
+    justify-content: center; /* Pusatkan secara vertikal */
+    min-height: 100vh; /* Menggunakan minimum tinggi layar penuh */
+    padding: 40px;
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.education-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: -30px;
+}
+
+.education-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    text-align: left;
+}
+
+.education-logo {
+    width: 125px;
+    height: auto;
+    margin-left: auto;
+}
+
+.education-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan secara horizontal */
+    justify-content: center; /* Pusatkan secara vertikal */
+    max-width: 100%;
+    margin-top: -40px; /* Naikkan posisi sedikit jika diperlukan */
+    text-align: center; /* Pusatkan teks di dalam elemen */
+    width: 100%; /* Memastikan pembungkus mengambil lebar penuh */
+    height: 100%; /* Menyesuaikan tinggi penuh jika diperlukan */
+}
+
+.education-degree,
+.education-gpa {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #555;
+    margin: 5px 0;
+    text-align: center;
+}
+
+.education-university {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.education-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.education-coursework,
+.education-skills,
+.education-photo-slider-container {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px; /* Sesuaikan max-width agar semua kontainer memiliki ukuran yang sama */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column; /* Konten diatur secara vertikal */
+    justify-content: center;
+}
+
+.education-section-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px; /* Kurangi margin bottom untuk mendekatkan judul dengan daftar */
+    text-align: center;
+    margin-top: -5px; /* Tambahkan margin top negatif untuk menggeser judul lebih ke atas */
+}
+
+.education-coursework-list,
+.education-skills-list {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 350;
+    overflow-y: auto;
+    max-height: 150px;
+    width: auto;
+}
+
+.education-photo-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 350px;
+    min-width: 400px;
+    max-width: 600px;
+    background-color: white;
+    position: relative; /* Tambahkan ini untuk memungkinkan positioning absolut di dalam kontainer */
+}
+
+.education-photo-slider {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    width: 100%;
+    align-items: center; /* Center gambar secara vertikal */
+    justify-content: center; /* Center gambar secara horizontal */
+    position: relative; /* Pastikan slider menggunakan posisi relatif untuk kontrol posisi absolut dari tombol */
+}
+
+.education-fade-in {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.education-fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.education-slider-photo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    position: relative; /* Tetap posisi relatif untuk referensi positioning ikon */
+}
+
+.education-slider-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: absolute; /* Gunakan posisi absolut untuk menempatkan ikon */
+    top: 50%; /* Posisikan di tengah vertikal */
+    transform: translateY(-50%); /* Pusatkan secara vertikal */
+    background-color: white; /* Tambahkan background untuk tombol jika diinginkan */
+    border-radius: 50%; /* Buat tombol berbentuk lingkaran */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan ke tombol */
+    z-index: 10; /* Pastikan tombol di atas gambar */
+}
+
+.education-slider-icon:hover {
+    transform: scale(1.2);
+}
+
+.education-slider-icon.left {
+    left: 10px; /* Tempatkan ikon di kiri */
+}
+
+.education-slider-icon.right {
+    right: 10px; /* Tempatkan ikon di kanan */
+}
+
+.education-coursework-list,
+.education-skills-list {
+    list-style: disc inside;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1.1rem; /* Perbesar font size untuk konten */
+    overflow-y: auto; /* Aktifkan scroll untuk daftar yang panjang */
+    max-height: 250px; /* Sesuaikan tinggi maksimum untuk daftar */
+    width: auto; /* Hilangkan width yang fix untuk mengikuti ukuran kotak */
+}
+
+.education-coursework-box ul,
+.education-skills-box ul {
+    margin-top: 2px; /* Kurangi nilai ini untuk mendekatkan daftar ke judul */
+    padding: 0;
+}
+
+.education-coursework,
+.education-skills {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background-color: white;
+    padding: 15px 20px; /* Kurangi padding atas untuk menggeser konten ke atas */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Pastikan konten dimulai dari atas */
+    align-items: center;
+}
+
+.education-coursework:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.education-skills:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
+    .education-content {
+        flex-direction: column; /* Ubah susunan menjadi kolom pada layar tablet */
+        align-items: center; /* Pusatkan elemen */
+    }
+
+    .education-title {
+        font-size: 2rem; /* Kurangi ukuran font */
+    }
+
+    .education-coursework,
+    .education-skills,
+    .education-photo-slider-container {
+        max-width: 100%; /* Gunakan lebar penuh pada layar tablet */
+        min-width: auto; /* Hapus batasan minimum lebar */
+    }
+
+    .education-photo-slider {
+        gap: 5px; /* Kurangi gap pada layar tablet */
+    }
+
+    .education-slider-photo {
+        max-width: 250px; /* Kurangi ukuran maksimum gambar */
+    }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+    .education-title {
+        font-size: 1.5rem; /* Kurangi ukuran font lebih kecil */
+    }
+
+    .education-section {
+        padding: 20px; /* Kurangi padding pada layar ponsel */
+    }
+
+    .education-content {
+        flex-direction: column; /* Susun vertikal untuk tampilan ponsel */
+    }
+
+    .education-coursework,
+    .education-skills,
+    .education-photo-slider-container {
+        max-width: 100%; /* Maksimalkan lebar pada ponsel */
+        min-width: auto; /* Hapus batasan minimum lebar */
+        margin-bottom: 20px; /* Tambahkan margin bawah antar elemen */
+    }
+
+    .education-photo-slider-container {
+        min-width: 100%; /* Sesuaikan lebar penuh pada ponsel */
+        max-width: 100%; /* Sesuaikan lebar penuh pada ponsel */
+    }
+
+    .education-slider-photo {
+        max-width: 200px; /* Ukuran gambar lebih kecil untuk ponsel */
+    }
+
+    .education-slider-icon {
+        width: 25px; /* Kurangi ukuran ikon */
+        height: 25px; /* Kurangi ukuran ikon */
+    }
+
+    .education-coursework-list,
+    .education-skills-list {
+        font-size: 1rem; /* Kurangi ukuran font untuk daftar */
+    }
+}

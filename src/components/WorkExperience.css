@@ -1,0 +1,175 @@
+/* WorkExperience.css */
+
+.work-experience-section {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    background-image: url(Foto7.jpg); /* Ganti dengan path sebenarnya ke Foto7 */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.work-experience-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.work-experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.work-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.work-card-header {
+    margin-bottom: 20px;
+}
+
+.company-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #0056b3;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.position-title {
+    font-size: 1.2rem;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.location-duration {
+    font-size: 1rem;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+.work-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.work-details li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.work-details li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0056b3;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
+    .work-experience-title {
+        font-size: 2.2rem; /* Kurangi ukuran font */
+    }
+
+    .work-experience-timeline {
+        gap: 20px; /* Kurangi gap antar kartu */
+    }
+
+    .work-card {
+        padding: 20px; /* Kurangi padding pada layar tablet */
+    }
+
+    .company-title {
+        font-size: 1.6rem; /* Kurangi ukuran font */
+    }
+
+    .position-title {
+        font-size: 1.1rem; /* Kurangi ukuran font */
+    }
+
+    .location-duration {
+        font-size: 0.9rem; /* Kurangi ukuran font */
+    }
+
+    .work-details {
+        font-size: 0.9rem; /* Kurangi ukuran font */
+        line-height: 1.6; /* Sesuaikan line-height */
+    }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+    .work-experience-section {
+        padding: 40px 10px; /* Kurangi padding pada layar ponsel */
+    }
+
+    .work-experience-title {
+        font-size: 1.8rem; /* Kurangi ukuran font lebih kecil */
+    }
+
+    .work-experience-timeline {
+        gap: 15px; /* Kurangi gap lebih kecil */
+    }
+
+    .work-card {
+        padding: 15px; /* Kurangi padding lebih kecil */
+    }
+
+    .company-title {
+        font-size: 1.4rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .position-title {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .location-duration {
+        font-size: 0.8rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .work-details {
+        font-size: 0.85rem; /* Ukuran font lebih kecil untuk konten */
+        line-height: 1.5; /* Sesuaikan line-height */
+    }
+
+    .work-details li {
+        padding-left: 20px; /* Kurangi padding untuk elemen daftar */
+    }
+}

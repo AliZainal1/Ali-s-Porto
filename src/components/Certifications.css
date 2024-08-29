@@ -1,0 +1,126 @@
+/* Certifications.css */
+
+.certifications-section {
+    padding: 60px 20px;
+    background-image: url(Foto7.jpg); /* Soft background for a clean look */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.certifications-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.certification-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.certification-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.certification-card:hover .certification-image {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.certification-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.certification-card:hover .certification-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.certification-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
+    .certifications-section {
+        padding: 40px 15px; /* Kurangi padding pada layar tablet */
+    }
+
+    .certifications-title {
+        font-size: 2.5rem; /* Kurangi ukuran font */
+    }
+
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Sesuaikan grid untuk tablet */
+    }
+
+    .certification-text {
+        font-size: 1rem; /* Kurangi ukuran font */
+    }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+    .certifications-section {
+        padding: 20px 10px; /* Kurangi padding pada layar ponsel */
+    }
+
+    .certifications-title {
+        font-size: 2rem; /* Kurangi ukuran font lebih kecil */
+        margin-bottom: 30px; /* Kurangi margin bawah */
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk tampilan ponsel */
+    }
+
+    .certification-card {
+        margin-bottom: 20px; /* Tambahkan margin bawah antar kartu */
+    }
+
+    .certification-text {
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+}

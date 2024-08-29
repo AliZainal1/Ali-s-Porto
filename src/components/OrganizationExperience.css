@@ -1,0 +1,226 @@
+/* OrganizationExperience.css */
+
+.organization-experience-section {
+    padding: 60px 20px;
+    background-image: url(Foto7.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.organization-experience-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.organization-experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+    animation: slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.organization-card.fresh-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    border-radius: 20px;
+    box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.1), -12px -12px 20px rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.organization-card.fresh-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15), -20px -20px 30px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+.organization-card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 20px;
+    position: relative;
+}
+
+.organization-icon {
+    font-size: 2.5rem;
+    padding: 15px;
+    background-color: #2575fc;
+    color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.organization-card:hover .organization-icon {
+    transform: rotate(360deg) scale(1.1);
+}
+
+.organization-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333333;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.position-title {
+    font-size: 1.1rem;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.location-duration {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.organization-details, .organization-details-list {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.organization-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.organization-details-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.organization-details-list li:hover {
+    color: #2575fc;
+    transform: translateX(5px);
+}
+
+.organization-details-list li::before {
+    content: '★';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #2575fc;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
+    .organization-experience-title {
+        font-size: 2.2rem; /* Kurangi ukuran font */
+    }
+
+    .organization-card.fresh-card {
+        padding: 20px; /* Kurangi padding pada layar tablet */
+        gap: 10px; /* Kurangi gap */
+    }
+
+    .organization-icon {
+        font-size: 2rem; /* Kurangi ukuran ikon */
+        padding: 10px; /* Kurangi padding ikon */
+    }
+
+    .organization-title {
+        font-size: 1.5rem; /* Kurangi ukuran font */
+    }
+
+    .organization-experience-timeline {
+        gap: 20px; /* Kurangi gap antar kartu */
+    }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+    .organization-experience-section {
+        padding: 40px 10px; /* Kurangi padding pada layar ponsel */
+    }
+
+    .organization-experience-title {
+        font-size: 1.8rem; /* Kurangi ukuran font lebih kecil */
+    }
+
+    .organization-card.fresh-card {
+        padding: 15px; /* Kurangi padding lebih kecil */
+        gap: 8px; /* Kurangi gap lebih kecil */
+    }
+
+    .organization-icon {
+        font-size: 1.8rem; /* Ukuran ikon lebih kecil untuk ponsel */
+        padding: 8px; /* Kurangi padding ikon lebih kecil */
+    }
+
+    .organization-title {
+        font-size: 1.3rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .position-title {
+        font-size: 1rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .location-duration {
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+
+    .organization-details,
+    .organization-details-list {
+        font-size: 0.9rem; /* Ukuran font lebih kecil untuk konten */
+        line-height: 1.5; /* Sesuaikan line-height */
+    }
+
+    .organization-experience-timeline {
+        gap: 15px; /* Kurangi gap lebih kecil */
+    }
+}

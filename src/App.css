@@ -1,38 +1,98 @@
+/* App.css */
+
+/* Gaya untuk Halaman Utama */
+body {
+  margin: 0; /* Hapus margin default body untuk mencegah overflow */
+  padding: 0;
+  overflow-x: hidden; /* Mencegah overflow horizontal */
+}
+
 .App {
-  text-align: center;
+  width: 100%;
+  overflow-x: hidden; /* Mencegah overflow horizontal pada keseluruhan aplikasi */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; 
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  overflow: hidden;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text-top {
+  position: absolute;
+  top: 60px;
+  left: 40px;
   color: white;
+  text-align: left;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
 }
 
-.App-link {
-  color: #61dafb;
+.hero-text-top h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero-text-top p {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.hero-buttons {
+  position: absolute;
+  bottom: 400px;
+  left: 13%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedin-icon {
+  width: 120px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.2);
+}
+
+.hero-buttons button {
+  background-color: transparent; /* Transparan */
+  color: black;
+  border: 1;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 7px; /* Membuat sedikit membulat */
+  font-size: 1rem;
+  transition: transform 0.5s ease;
+  position: relative; /* Untuk efek grid */
+  overflow: hidden; /* Menghindari konten yang melebihi tombol */
+  backdrop-filter: blur(10px); /* Efek blur untuk latar belakang */
+}
+
+.hero-buttons button:hover {
+  transform: scale(1.2);
 }

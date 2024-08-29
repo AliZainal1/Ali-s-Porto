@@ -1,0 +1,138 @@
+/* HomePage.css */
+
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: url(profile-photo.jpg); /* Sesuaikan dengan path gambar background */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-container {
+    position: relative;
+    min-height: 100vh; /* Atur tinggi minimum agar elemen anak bisa bergerak lebih jauh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 90px;
+  }
+  
+  
+  .hero-text-top {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    position: absolute;
+    bottom: 50%; /* Nilai negatif untuk memaksa elemen lebih jauh ke bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+  }
+  
+  
+  .linkedin-icon {
+    width: 80px;
+    height: 25px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 2px solid black; /* Tambahkan border berwarna biru */
+    background-color: transparent; /* Latar belakang transparan */
+    color: black; /* Warna teks biru agar sesuai dengan border */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk efek hover */
+  }
+  
+  button:hover {
+    background-color: black; /* Latar belakang abu-abu pada hover */
+    color: #fff; /* Warna teks berubah menjadi putih pada hover */
+    border-color: black; /* Border juga berubah menjadi abu-abu */
+  }
+  
+  
+  /* Media Queries untuk Responsivitas */
+  
+  /* Untuk tampilan tablet */
+  @media (max-width: 768px) {
+    .hero-container {
+      padding: 0 10px; /* Beri sedikit padding pada layar tablet */
+    }
+  
+    .hero-text-top {
+      position: static; /* Ubah dari absolute ke static */
+      transform: none; /* Hapus transform */
+      margin-bottom: 20px; /* Beri jarak antara teks dan gambar */
+      text-align: center; /* Center teks */
+    }
+  
+    .hero-image {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 15px; /* Jarak lebih kecil untuk tablet */
+    }
+  
+    .hero-buttons {
+      position: static; /* Ubah dari absolute ke static */
+      transform: none; /* Hapus transform */
+      flex-direction: column; /* Ubah layout tombol menjadi vertikal */
+      gap: 10px; /* Kurangi gap antar tombol */
+      margin-top: 10px; /* Beri jarak atas untuk tombol */
+    }
+  
+    .linkedin-icon {
+      width: 30px;
+      height: 30px;
+      margin-right: 0; /* Hapus margin kanan untuk tata letak vertikal */
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 1rem; /* Ukuran font lebih kecil untuk tablet */
+    }
+  }
+  
+  /* Untuk tampilan ponsel */
+  @media (max-width: 480px) {
+    .hero-image {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 10px;
+    }
+  
+    .hero-text-top {
+      margin-bottom: 15px; /* Kurangi margin bawah untuk lebih mendekatkan teks ke gambar */
+    }
+  
+    .hero-buttons {
+      gap: 10px; /* Kurangi gap lebih kecil untuk ponsel */
+    }
+  
+    button {
+      padding: 8px 15px; /* Padding lebih kecil untuk ponsel */
+      font-size: 0.9rem; /* Ukuran font lebih kecil untuk ponsel */
+    }
+  
+    .linkedin-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  

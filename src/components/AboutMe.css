@@ -1,0 +1,118 @@
+.about-me {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    background: url('./Foto7.jpg') no-repeat center center / cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-blend-mode: overlay;
+}
+
+.glassmorphism-container {
+    width: 100%;
+    max-width: none; /* Ubah max-width agar tidak ada batas lebar */
+    padding: 40px; /* Pertahankan padding untuk ruang internal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+}
+
+.about-me-title {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+.about-me-description {
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', serif;
+}
+
+.photo-slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.photo-slider {
+    display: flex;
+    gap: 15px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.slider-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.slider-image:hover {
+    transform: scale(1.05);
+}
+
+.slider-icon {
+    width: 40px;
+    height: 40px; 
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.slider-icon:hover {
+    transform: scale(1.1);
+}
+
+@keyframes subtle-fade {
+    0% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
