@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f9; /* Light background color for contrast */
+  background-color: #f4f4f9;
 }
 
 .navbar {
@@ -16,17 +16,26 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background: grey; /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Glassmorphism effect */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for depth */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  background: grey;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar:hover {
-  background: rgba(26, 4, 78, 0.4); /* Slightly darker on hover for feedback */
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  background: rgba(26, 4, 78, 0.4);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+.hamburger {
+  display: none; /* Hidden by default, shown on mobile */
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ffffff;
+  padding: 15px;
+  z-index: 1001;
 }
 
 .navbar-links {
@@ -49,15 +58,15 @@ body {
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease, transform 0.3s ease;
-  padding: 5px 10px; /* Add padding for larger click area */
-  border-radius: 10px; /* Rounded corners for hover effect */
+  padding: 5px 10px;
+  border-radius: 10px;
 }
 
 .navbar-links span:hover {
-  color: #333333; /* Darker color on hover for contrast */
-  background-color: rgba(255, 255, 255, 0.8); /* Light background on hover */
-  transform: translateY(-3px); /* Subtle lift effect */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+  color: #333333;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-links span::after {
@@ -65,7 +74,7 @@ body {
   display: block;
   width: 0;
   height: 3px;
-  background: #007bff; /* Blue accent color for underline */
+  background: #007bff;
   transition: width 0.4s ease;
   position: absolute;
   left: 50%;
@@ -74,53 +83,65 @@ body {
 }
 
 .navbar-links span:hover::after {
-  width: 100%; /* Expand underline effect on hover */
+  width: 100%;
 }
 
-/* Media Queries untuk Responsivitas */
-
-/* Untuk tampilan tablet */
+/* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .navbar {
-    padding: 10px 15px; /* Kurangi padding untuk layar tablet */
+    padding: 10px 15px;
   }
 
   .navbar-links {
-    gap: 15px; /* Sesuaikan gap untuk layar yang lebih kecil */
+    gap: 15px;
   }
 
   .navbar-links span {
-    font-size: 0.9rem; /* Sesuaikan ukuran font untuk layar tablet */
+    font-size: 0.9rem;
   }
 }
 
-/* Untuk tampilan ponsel */
 @media (max-width: 480px) {
   .navbar {
-    flex-direction: column; /* Ubah arah navbar menjadi kolom pada layar ponsel */
-    padding: 10px 15px; /* Sesuaikan padding */
-    justify-content: flex-start; /* Posisikan elemen di atas */
-    align-items: flex-start; /* Posisikan elemen di atas */
+    flex-direction: column;
+    padding: 10px 15px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
   }
 
   .navbar-links {
-    flex-direction: column; /* Susun tautan navbar secara vertikal */
-    gap: 10px; /* Sesuaikan gap untuk tampilan ponsel */
-    width: 100%; /* Lebar penuh untuk tautan */
-    align-items: flex-start; /* Posisikan tautan di sebelah kiri */
+    display: none; /* Hide navbar links by default */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-start;
+    background-color: rgba(26, 4, 78, 0.8);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.show {
+    display: flex; /* Show navbar links when active */
   }
 
   .navbar-links span {
-    font-size: 0.85rem; /* Ukuran font lebih kecil untuk ponsel */
-    padding: 8px 15px; /* Tambahkan padding untuk klik area yang lebih besar */
-    width: 100%; /* Lebar penuh untuk klik area */
+    font-size: 0.85rem;
+    padding: 8px 15px;
+    width: 100%;
   }
 
   .navbar-links span:hover {
-    transform: none; /* Hilangkan efek angkat pada ponsel */
+    transform: none;
   }
 
   .navbar-links span::after {
-    display: none; /* Hilangkan underline untuk ponsel */
+    display: none;
   }
 }
