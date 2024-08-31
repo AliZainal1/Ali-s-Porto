@@ -18,8 +18,8 @@
 
 .glassmorphism-container {
     width: 100%;
-    max-width: none; /* Ubah max-width agar tidak ada batas lebar */
-    padding: 40px; /* Pertahankan padding untuk ruang internal */
+    max-width: none;
+    padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     border: 1px solid #ddd;
@@ -101,73 +101,70 @@
     transform: scale(1.1);
 }
 
-@keyframes subtle-fade {
-    0% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
 /* Media Queries untuk Responsivitas */
 
 /* Untuk tampilan tablet */
 @media (max-width: 768px) {
     .about-me {
-        padding: 30px; /* Kurangi padding pada layar tablet */
-        background-attachment: scroll; /* Hapus efek fixed untuk performa yang lebih baik di perangkat tablet */
+        padding: 30px;
+        background-attachment: scroll;
     }
 
     .about-me-title {
-        font-size: 2.5rem; /* Kurangi ukuran font */
+        font-size: 2.5rem;
     }
 
     .about-me-description {
-        font-size: 1rem; /* Kurangi ukuran font */
+        font-size: 1rem;
     }
 
     .glassmorphism-container {
-        padding: 30px; /* Kurangi padding untuk tablet */
+        padding: 30px;
     }
 
     .photo-slider-container {
         flex-direction: column; /* Susun vertikal di tablet */
-        padding: 15px; /* Kurangi padding */
+        padding: 15px;
     }
 }
 
 /* Untuk tampilan ponsel */
 @media (max-width: 480px) {
     .about-me {
-        padding: 20px; /* Kurangi padding pada layar ponsel */
-        background-attachment: scroll; /* Hapus efek fixed untuk performa yang lebih baik di perangkat ponsel */
+        padding: 20px;
+        background-attachment: scroll;
     }
 
     .about-me-title {
-        font-size: 2rem; /* Kurangi ukuran font lebih kecil */
+        font-size: 2rem;
     }
 
     .about-me-description {
-        font-size: 0.9rem; /* Kurangi ukuran font lebih kecil */
+        font-size: 0.9rem;
     }
 
     .glassmorphism-container {
-        padding: 20px; /* Kurangi padding lebih kecil */
-    }
-
-    .slider-image {
-        max-width: 150px; /* Kurangi ukuran gambar untuk ponsel */
+        padding: 20px;
     }
 
     .photo-slider-container {
-        gap: 10px; /* Kurangi gap di ponsel */
+        flex-direction: column; /* Vertically stack images */
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .photo-slider {
+        width: 100%; /* Ensure full width on mobile */
+        justify-content: center;
+    }
+
+    .slider-image {
+        max-width: 80%; /* Increase size of the image on mobile */
+        height: auto;
+    }
+
+    .slider-icon {
+        display: none; /* Hide navigation icons on mobile */
     }
 }
