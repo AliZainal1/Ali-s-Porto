@@ -199,6 +199,10 @@ button:hover {
     background-color: transparent; /* Hilangkan background di ponsel */
     backdrop-filter: none; /* Hilangkan efek blur yang mungkin diterapkan dengan backdrop-filter */
     filter: none; /* Pastikan tidak ada filter lain yang diterapkan */
+    border: none; /* Hilangkan border jika ada */
+    box-shadow: none; /* Hilangkan shadow jika ada */
+    padding: 0; /* Pastikan tidak ada padding yang menyebabkan masalah */
+    margin: 0; /* Pastikan tidak ada margin yang menyebabkan masalah */
   }
 
   .navbar.active {
@@ -217,4 +221,5 @@ button:hover {
     right: 10px;
   }
 }
+
 
