@@ -18,8 +18,8 @@
 
 .glassmorphism-container {
     width: 100%;
-    max-width: none;
-    padding: 40px;
+    max-width: none; /* Ubah max-width agar tidak ada batas lebar */
+    padding: 40px; /* Pertahankan padding untuk ruang internal */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     border: 1px solid #ddd;
@@ -66,7 +66,6 @@
     gap: 15px;
     overflow: hidden;
     width: 100%;
-    justify-content: center;
 }
 
 .image-container {
@@ -102,70 +101,73 @@
     transform: scale(1.1);
 }
 
-/* Media Queries for Responsiveness */
-
-/* For tablet view */
-@media (max-width: 768px) {
-    .about-me {
-        padding: 30px;
-        background-attachment: scroll;
+@keyframes subtle-fade {
+    0% {
+        opacity: 0.8;
     }
-
-    .about-me-title {
-        font-size: 2.5rem;
-    }
-
-    .about-me-description {
-        font-size: 1rem;
-    }
-
-    .glassmorphism-container {
-        padding: 30px;
-    }
-
-    .photo-slider-container {
-        flex-direction: row; /* Still horizontal but with smaller gap */
-        padding: 15px;
+    100% {
+        opacity: 1;
     }
 }
 
-/* For mobile view */
-@media (max-width: 480px) {
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
     .about-me {
-        padding: 20px;
-        background-attachment: scroll;
+        padding: 30px; /* Kurangi padding pada layar tablet */
+        background-attachment: scroll; /* Hapus efek fixed untuk performa yang lebih baik di perangkat tablet */
     }
 
     .about-me-title {
-        font-size: 2rem;
+        font-size: 2.5rem; /* Kurangi ukuran font */
     }
 
     .about-me-description {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Kurangi ukuran font */
     }
 
     .glassmorphism-container {
-        padding: 20px;
+        padding: 30px; /* Kurangi padding untuk tablet */
     }
 
     .photo-slider-container {
-        flex-direction: column; /* Vertically stack images */
-        align-items: center;
-        padding: 10px;
-        gap: 10px;
+        flex-direction: column; /* Susun vertikal di tablet */
+        padding: 15px; /* Kurangi padding */
+    }
+}
+
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+    .about-me {
+        padding: 20px; /* Kurangi padding pada layar ponsel */
+        background-attachment: scroll; /* Hapus efek fixed untuk performa yang lebih baik di perangkat ponsel */
     }
 
-    .photo-slider {
-        width: 100%; /* Ensure full width on mobile */
-        justify-content: center;
+    .about-me-title {
+        font-size: 2rem; /* Kurangi ukuran font lebih kecil */
+    }
+
+    .about-me-description {
+        font-size: 0.9rem; /* Kurangi ukuran font lebih kecil */
+    }
+
+    .glassmorphism-container {
+        padding: 20px; /* Kurangi padding lebih kecil */
     }
 
     .slider-image {
-        max-width: 80%; /* Increase size of the image on mobile */
-        height: auto;
+        max-width: 150px; /* Kurangi ukuran gambar untuk ponsel */
     }
 
-    .slider-icon {
-        display: block; /* Keep navigation icons visible */
+    .photo-slider-container {
+        gap: 10px; /* Kurangi gap di ponsel */
     }
 }

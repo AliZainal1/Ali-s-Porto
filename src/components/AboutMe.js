@@ -6,7 +6,6 @@ import Foto3 from './Foto3.jpg';
 import Foto4 from './Foto4.jpg';
 import Foto5 from './Foto5.jpg';
 import Foto6 from './Foto6.jpg';
-import Foto7 from './Foto7.jpg';
 import IkonKanan from './Ikon kanan.svg';
 import IkonKiri from './Ikon kiri.svg';
 
@@ -33,11 +32,15 @@ const AboutMe = () => {
   };
 
   const getVisibleImages = () => {
-    return [
-      images[startIndex],
-      images[(startIndex + 1) % images.length],
-      images[(startIndex + 2) % images.length],
-    ];
+    if (window.innerWidth <= 480) { // Show only one image on mobile
+      return [images[startIndex]];
+    } else {
+      return [
+        images[startIndex],
+        images[(startIndex + 1) % images.length],
+        images[(startIndex + 2) % images.length],
+      ];
+    }
   };
 
   return (
