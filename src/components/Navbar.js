@@ -2,50 +2,33 @@ import React, { useState } from 'react';
 import './Navbar.css';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); // State to control the navbar visibility
+  const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false); // Close the navbar after clicking a link
+    setIsOpen(false);
   };
 
   const toggleNavbar = () => {
-    setIsOpen(!isOpen); // Toggle the navbar state
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${isOpen ? 'active' : ''}`}>
       <div className="hamburger" onClick={toggleNavbar}>
-        &#9776; {/* Hamburger menu icon */}
+        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
+        <div className={`bar ${isOpen ? 'open' : ''}`}></div>
       </div>
       <ul className={`navbar-links ${isOpen ? 'show' : ''}`}>
-        <li>
-          <span onClick={() => scrollToSection('home')}>Home</span>
-        </li>
-        <li>
-          <span onClick={() => scrollToSection('about')}>About</span>
-        </li>
-        <li>
-          <span onClick={() => scrollToSection('education')}>Education</span>
-        </li>
-        <li>
-          <span onClick={() => scrollToSection('work-experience')}>Work Experience</span>
-        </li>
-        <li>
-          <span onClick={() => scrollToSection('organization-experience')}>Organization Experience</span>
-        </li>
-        <li>
-          <span onClick={() => scrollToSection('projects')}>Projects</span>
-        </li>
-        <li>
-          <span onClick={() => scrollToSection('certifications')}>Certifications</span>
-        </li>
-        <li>
-          <span onClick={() => scrollToSection('contact')}>Contact</span>
-        </li>
+        {['home', 'about', 'education', 'work-experience', 'organization-experience', 'projects', 'certifications', 'contact'].map((section) => (
+          <li key={section}>
+            <span onClick={() => scrollToSection(section)}>{section.replace('-', ' ').replace(/\b\w/g, (c) => c.toUpperCase())}</span>
+          </li>
+        ))}
       </ul>
     </nav>
   );
