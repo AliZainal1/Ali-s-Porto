@@ -38,10 +38,10 @@ body {
 }
 
 .hamburger .bar {
-  width: 25px;
-  height: 3px;
+  width: 45px;
+  height: 43px;
   background-color: #ffffff;
-  margin: 5px 0;
+  margin: 12px 10px;
   transition: 0.4s;
 }
 
