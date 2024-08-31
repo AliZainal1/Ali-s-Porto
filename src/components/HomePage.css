@@ -211,7 +211,7 @@ button:hover {
 
   .navbar .hamburger-menu {
     display: block !important; /* Tampilkan tombol hamburger di ponsel */
-    background: none !important;
+    background: black !important;
     border: none !important;
     color: black !important; /* Ubah warna ikon menjadi hitam */
     font-size: 30px !important; /* Perbesar ukuran ikon hamburger */
