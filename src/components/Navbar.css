@@ -35,13 +35,14 @@ body {
   position: relative;
   z-index: 1001;
   transition: transform 0.3s ease;
+  margin-left: 15px; /* Added margin to move the icon away from the left edge */
 }
 
 .hamburger .bar {
-  width: 30px; /* Increase width */
-  height: 4px; /* Increase height */
-  background-color: #000000; /* Change to black for better contrast */
-  margin: 6px 0; /* Adjust spacing */
+  width: 30px;
+  height: 4px;
+  background-color: #000000;
+  margin: 6px 0;
   transition: 0.4s;
 }
 
@@ -124,11 +125,12 @@ body {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 15px; /* Increased padding for more space */
+    padding: 15px;
   }
 
   .hamburger {
     display: block;
+    margin-left: 20px; /* Adjusted margin to position the hamburger icon */
   }
 
   .navbar-links {
@@ -137,11 +139,11 @@ body {
     gap: 20px;
     width: 100%;
     align-items: flex-start;
-    background-color: rgba(26, 4, 78, 0.95); /* Slightly darker for better contrast */
+    background-color: rgba(26, 4, 78, 0.95);
     position: absolute;
     top: 60px;
     left: 0;
-    padding: 15px; /* Increased padding for better touch targets */
+    padding: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
@@ -151,8 +153,8 @@ body {
   }
 
   .navbar-links span {
-    font-size: 1.2rem; /* Larger font size for better readability */
-    padding: 12px 20px; /* Increased padding for better touch targets */
+    font-size: 1.2rem;
+    padding: 12px 20px;
     width: 100%;
     text-align: left;
   }
