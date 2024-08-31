@@ -40,7 +40,14 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  align-items: center; /* Pastikan elemen di dalam .hero-buttons ter-align di tengah secara vertikal */
   gap: 20px;
+}
+
+.linkedin-icon {
+  width: 80px; /* Gunakan ukuran tetap untuk menjaga konsistensi */
+  height: auto; /* Pertahankan rasio aspek */
+  object-fit: contain; /* Jaga agar seluruh gambar terlihat */
 }
 
 .cv-button-container {
@@ -63,17 +70,10 @@
   transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi untuk hover */
 }
 
-
 .cv-button:hover {
   background-color: #fff; /* Warna latar belakang putih pada hover */
   color: #333; /* Warna teks abu-abu gelap pada hover */
   border-color: #333; /* Border berubah menjadi abu-abu gelap pada hover */
-}
-
-.linkedin-icon {
-  width: 80px; /* Ukuran lebar gambar LinkedIn */
-  height: 25px; /* Ukuran tinggi gambar LinkedIn */
-  object-fit: cover; /* Membuat gambar LinkedIn menggunakan object-fit cover */
 }
 
 button {
@@ -114,6 +114,7 @@ button:hover {
     flex-direction: column; /* Ubah layout tombol menjadi vertikal */
     gap: 10px; /* Kurangi gap antar tombol */
     margin-top: 10px; /* Beri jarak atas untuk tombol */
+    align-items: center; /* Center elemen di dalam flex container */
   }
 
   .cv-button-container {
@@ -124,9 +125,9 @@ button:hover {
   }
 
   .linkedin-icon {
-    width: 30px;
-    height: 30px;
-    object-fit: cover; /* Menyebabkan gambar LinkedIn untuk object cover */
+    width: 30px; /* Gunakan ukuran tetap untuk LinkedIn di tablet */
+    height: auto; /* Pertahankan rasio aspek */
+    object-fit: contain; /* Jaga agar seluruh gambar terlihat */
     margin-right: 0; /* Hapus margin kanan untuk tata letak vertikal */
   }
 
@@ -149,7 +150,7 @@ button:hover {
     display: block; /* Tampilkan tombol hamburger di tablet */
     background: none;
     border: none;
-    color: white;
+    color: black;
     font-size: 24px;
     cursor: pointer;
     position: absolute;
@@ -157,7 +158,6 @@ button:hover {
     right: 10px;
   }
 }
-
 
 /* Untuk tampilan ponsel */
 @media (max-width: 480px) {
@@ -173,22 +173,24 @@ button:hover {
 
   .hero-buttons {
     gap: 10px; /* Kurangi gap lebih kecil untuk ponsel */
+    flex-direction: column; /* Pastikan elemen di dalam .hero-buttons menjadi kolom di mobile */
+    align-items: center; /* Center elemen di dalam flex container */
   }
 
   .cv-button-container {
     margin-top: 15px; /* Jarak atas untuk tombol CV */
   }
 
+  .linkedin-icon {
+    width: 25px; /* Gunakan ukuran tetap untuk LinkedIn di ponsel */
+    height: auto; /* Pertahankan rasio aspek */
+    object-fit: contain; /* Jaga agar seluruh gambar terlihat */
+  }
+
   button,
   .cv-button { /* Tambahkan responsivitas untuk kedua tombol */
     padding: 8px 15px; /* Padding lebih kecil untuk ponsel */
     font-size: 0.9rem; /* Ukuran font lebih kecil untuk ponsel */
-  }
-
-  .linkedin-icon {
-    width: 25px;
-    height: 25px;
-    object-fit: cover; /* Menyebabkan gambar LinkedIn untuk object cover */
   }
 
   /* Modifikasi navbar di ponsel */
@@ -204,7 +206,7 @@ button:hover {
     display: block; /* Tampilkan tombol hamburger di ponsel */
     background: none;
     border: none;
-    color: white;
+    color: black;
     font-size: 24px;
     cursor: pointer;
     position: absolute;
@@ -212,4 +214,3 @@ button:hover {
     right: 10px;
   }
 }
-
