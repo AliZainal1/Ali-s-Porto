@@ -18,8 +18,8 @@
 
 .glassmorphism-container {
     width: 100%;
-    max-width: none; /* Ubah max-width agar tidak ada batas lebar */
-    padding: 40px; /* Pertahankan padding untuk ruang internal */
+    max-width: none;
+    padding: 40px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     border: 1px solid #ddd;
@@ -101,18 +101,70 @@
     transform: scale(1.1);
 }
 
-@keyframes subtle-fade {
-    0% {
-        opacity: 0.8;
+/* Media Queries untuk Responsivitas */
+
+/* Untuk tampilan tablet */
+@media (max-width: 768px) {
+    .about-me {
+        padding: 30px;
+        background-attachment: scroll;
     }
-    100% {
-        opacity: 1;
+
+    .about-me-title {
+        font-size: 2.5rem;
+    }
+
+    .about-me-description {
+        font-size: 1rem;
+    }
+
+    .glassmorphism-container {
+        padding: 30px;
+    }
+
+    .photo-slider-container {
+        flex-direction: column; /* Susun vertikal di tablet */
+        padding: 15px;
     }
 }
 
-body {
-    font-family: 'Times New Roman', serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+/* Untuk tampilan ponsel */
+@media (max-width: 480px) {
+    .about-me {
+        padding: 20px;
+        background-attachment: scroll;
+    }
+
+    .about-me-title {
+        font-size: 2rem;
+    }
+
+    .about-me-description {
+        font-size: 0.9rem;
+    }
+
+    .glassmorphism-container {
+        padding: 20px;
+    }
+
+    .photo-slider-container {
+        flex-direction: column; /* Vertically stack images */
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .photo-slider {
+        width: 100%; /* Ensure full width on mobile */
+        justify-content: center;
+    }
+
+    .slider-image {
+        max-width: 80%; /* Increase size of the image on mobile */
+        height: auto;
+    }
+
+    .slider-icon {
+        display: none; /* Hide navigation icons on mobile */
+    }
 }
