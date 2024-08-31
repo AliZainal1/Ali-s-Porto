@@ -125,7 +125,8 @@ button:hover {
   }
 
   .linkedin-icon {
-    width: 30px; /* Gunakan ukuran tetap untuk LinkedIn di tablet */
+    width: 50px; /* Gunakan ukuran tetap untuk LinkedIn di tablet */
+    height: 50px;
     height: auto; /* Pertahankan rasio aspek */
     object-fit: contain; /* Jaga agar seluruh gambar terlihat */
     margin-right: 0; /* Hapus margin kanan untuk tata letak vertikal */
@@ -182,7 +183,8 @@ button:hover {
   }
 
   .linkedin-icon {
-    width: 25px; /* Gunakan ukuran tetap untuk LinkedIn di ponsel */
+    width: 50px; /* Gunakan ukuran tetap untuk LinkedIn di ponsel */
+    height: 50px;
     height: auto; /* Pertahankan rasio aspek */
     object-fit: contain; /* Jaga agar seluruh gambar terlihat */
   }
