@@ -18,10 +18,10 @@ const HomePage = () => {
           <button onClick={() => window.location.href = '#contact'}>Contact Me</button>
         </div>
 
-        {/* Button baru untuk Curriculum Vitae di bawah tombol LinkedIn dan Contact */}
+        {/* Updated Button text for Curriculum Vitae */}
         <div className="cv-button-container">
           <button className="cv-button" onClick={() => window.open('https://drive.google.com/drive/folders/1qIibZL-G0IH0sNOrEm4bwPG_UVj2G-sX?usp=sharing', '_blank')}>
-            Ali's Curriculum Vitae
+            My CV
           </button>
         </div>
       </div>

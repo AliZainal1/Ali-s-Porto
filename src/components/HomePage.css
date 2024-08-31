@@ -1,5 +1,3 @@
-/* HomePage.css */
-
 .home-page {
   display: flex;
   justify-content: center;
@@ -7,220 +5,149 @@
   min-height: 100vh;
   padding: 0;
   margin: 0;
-  background-color: #f4f4f4;
-  background-image: url(profile-photo.jpg); /* Sesuaikan dengan path gambar background */
+  background-image: url(profile-photo.jpg); /* Keep the background image */
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /* Adds a parallax effect to the background */
   position: relative;
 }
 
 .hero-container {
   position: relative;
-  min-height: 100vh; /* Atur tinggi minimum agar elemen anak bisa bergerak lebih jauh */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 90px;
+  text-align: center;
+  color: #ffffff; /* White text for better contrast */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for readability */
+  padding: 40px;
+  border-radius: 20px; /* Rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
 }
 
 .hero-text-top {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.7);
-  text-align: center;
+  margin-bottom: 30px; /* Space between text and buttons */
+  font-size: 2rem; /* Larger font for a bold statement */
+  font-weight: 300; /* Light font weight for a sleek look */
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .hero-buttons {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
-  align-items: center; /* Pastikan elemen di dalam .hero-buttons ter-align di tengah secara vertikal */
   gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .linkedin-icon {
-  width: 80px; /* Gunakan ukuran tetap untuk menjaga konsistensi */
-  height: auto; /* Pertahankan rasio aspek */
-  object-fit: contain; /* Jaga agar seluruh gambar terlihat */
+  width: 80px; /* Keep LinkedIn logo size */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image is fully visible */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth scaling and filter on hover */
+}
+
+.linkedin-icon:hover {
+  transform: scale(1.1); /* Enlarge slightly on hover */
+  filter: brightness(1.2); /* Brighten image on hover */
 }
 
 .cv-button-container {
-  position: absolute;
-  bottom: 15%; /* Posisikan tombol CV di bagian bawah */
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 20px; /* Adjust spacing */
+  animation: fadeIn 2s ease-out; /* Delay for entrance animation */
 }
 
-/* Tambahkan style untuk tombol CV */
 .cv-button {
-  padding: 15px 40px;
-  font-size: 1.2rem;
+  padding: 12px 35px;
+  font-size: 1.1rem;
   border-radius: 30px;
-  border: 2px solid #fff;
-  background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
-  color: #fff; /* Warna teks putih */
+  border: 2px solid #ffffff; /* White border for a clean look */
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* White text for contrast */
   cursor: pointer;
-  margin-bottom: 120px;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi untuk hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .cv-button:hover {
-  background-color: #fff; /* Warna latar belakang putih pada hover */
-  color: #333; /* Warna teks abu-abu gelap pada hover */
-  border-color: #333; /* Border berubah menjadi abu-abu gelap pada hover */
+  background-color: #ffffff; /* Change to white on hover */
+  color: #333333; /* Dark text on hover */
+  border-color: #333333; /* Dark border on hover */
+  transform: translateY(-5px); /* Lift button slightly on hover */
 }
 
 button {
-  padding: 15px 30px;
-  font-size: 1.2rem;
-  border-radius: 25px;
-  border: 2px solid black; /* Tambahkan border berwarna hitam */
-  background-color: transparent; /* Latar belakang transparan */
-  color: black; /* Warna teks hitam */
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  border: 2px solid #ffffff; /* White border */
+  background-color: transparent; /* Transparent background */
+  color: #ffffff; /* White text */
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk efek hover */
+  transition: all 0.3s ease; /* Smooth transitions for hover effects */
 }
 
 button:hover {
-  background-color: black; /* Latar belakang hitam pada hover */
-  color: #fff; /* Warna teks berubah menjadi putih pada hover */
-  border-color: black; /* Border juga berubah menjadi hitam */
+  background-color: #ffffff; /* White background on hover */
+  color: #333333; /* Dark text on hover */
+  border-color: #333333; /* Dark border on hover */
+  transform: translateY(-5px); /* Lift button slightly on hover */
 }
 
-/* Media Queries untuk Responsivitas */
-
-/* Untuk tampilan tablet */
 @media (max-width: 768px) {
   .hero-container {
-    padding: 0 10px; /* Beri sedikit padding pada layar tablet */
+    padding: 20px; /* Reduce padding for smaller screens */
   }
 
   .hero-text-top {
-    position: static; /* Ubah dari absolute ke static */
-    transform: none; /* Hapus transform */
-    margin-bottom: 20px; /* Beri jarak antara teks dan gambar */
-    text-align: center; /* Center teks */
+    font-size: 1.5rem; /* Reduce font size for tablets */
   }
 
   .hero-buttons {
-    position: static; /* Ubah dari absolute ke static */
-    transform: none; /* Hapus transform */
-    flex-direction: column; /* Ubah layout tombol menjadi vertikal */
-    gap: 10px; /* Kurangi gap antar tombol */
-    margin-top: 10px; /* Beri jarak atas untuk tombol */
-    align-items: center; /* Center elemen di dalam flex container */
-  }
-
-  .cv-button-container {
-    position: static; /* Ubah dari absolute ke static */
-    transform: none; /* Hapus transform */
-    margin-top: 20px; /* Jarak atas untuk tombol CV */
-    text-align: center; /* Center tombol CV */
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px; /* Adjust gap for vertical layout */
   }
 
   .linkedin-icon {
-    width: 120px; /* Gunakan ukuran tetap untuk LinkedIn di tablet */
-    height: 120px;
-    height: auto; /* Pertahankan rasio aspek */
-    object-fit: contain; /* Jaga agar seluruh gambar terlihat */
-    margin-right: 0; /* Hapus margin kanan untuk tata letak vertikal */
+    width: 60px; /* Adjust LinkedIn logo size for tablets */
   }
 
   button,
-  .cv-button { /* Tambahkan responsivitas untuk kedua tombol */
-    padding: 10px 20px;
-    font-size: 1rem; /* Ukuran font lebih kecil untuk tablet */
-  }
-
-  /* Modifikasi navbar di tablet */
-  .navbar {
-    background-color: transparent; /* Hilangkan background di tablet */
-  }
-
-  .navbar.active {
-    background-color: #333; /* Munculkan background saat hamburger ditekan */
-  }
-
-  .hamburger-menu {
-    display: block; /* Tampilkan tombol hamburger di tablet */
-    background: none;
-    border: none;
-    color: black;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  .cv-button {
+    padding: 10px 25px; /* Reduce padding for smaller buttons */
+    font-size: 1rem; /* Smaller font size */
   }
 }
 
-/* Untuk tampilan ponsel */
 @media (max-width: 480px) {
-  .hero-image {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 10px;
-  }
-
   .hero-text-top {
-    margin-bottom: 15px; /* Kurangi margin bawah untuk lebih mendekatkan teks ke gambar */
+    font-size: 1.2rem; /* Further reduce font size for mobile */
   }
 
   .hero-buttons {
-    gap: 10px; /* Kurangi gap lebih kecil untuk ponsel */
-    flex-direction: column; /* Pastikan elemen di dalam .hero-buttons menjadi kolom di mobile */
-    align-items: center; /* Center elemen di dalam flex container */
-  }
-
-  .cv-button-container {
-    margin-top: 15px; /* Jarak atas untuk tombol CV */
+    gap: 10px; /* Tighten gap for mobile */
   }
 
   .linkedin-icon {
-    width: 120px; /* Gunakan ukuran tetap untuk LinkedIn di ponsel */
-    height: auto; /* Pertahankan rasio aspek */
-    object-fit: contain; /* Jaga agar seluruh gambar terlihat */
+    width: 50px; /* Smaller LinkedIn logo for mobile */
   }
 
   button,
-  .cv-button { /* Tambahkan responsivitas untuk kedua tombol */
-    padding: 8px 15px; /* Padding lebih kecil untuk ponsel */
-    font-size: 0.9rem; /* Ukuran font lebih kecil untuk ponsel */
-  }
-
-  /* Modifikasi navbar di ponsel */
-  .navbar {
-    background-color: transparent; /* Hilangkan background di ponsel */
-    backdrop-filter: none; /* Hilangkan efek blur yang mungkin diterapkan dengan backdrop-filter */
-    filter: none; /* Pastikan tidak ada filter lain yang diterapkan */
-    border: none; /* Hilangkan border jika ada */
-    box-shadow: none; /* Hilangkan shadow jika ada */
-    padding: 0; /* Pastikan tidak ada padding yang menyebabkan masalah */
-    margin: 0; /* Pastikan tidak ada margin yang menyebabkan masalah */
-  }
-
-  .navbar.active {
-    background-color: #333; /* Munculkan background saat hamburger ditekan */
-  }
-
-  .navbar .hamburger-menu {
-    display: block !important; /* Tampilkan tombol hamburger di ponsel */
-    background: black !important;
-    border: none !important;
-    color: black !important; /* Ubah warna ikon menjadi hitam */
-    font-size: 30px !important; /* Perbesar ukuran ikon hamburger */
-    cursor: pointer !important;
-    position: absolute !important;
-    top: 10px !important;
-    right: 10px !important;
+  .cv-button {
+    padding: 8px 20px; /* Smaller padding for mobile */
+    font-size: 0.9rem; /* Smaller font size */
   }
 }
-
-
-
