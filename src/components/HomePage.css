@@ -213,13 +213,14 @@ button:hover {
     display: block; /* Tampilkan tombol hamburger di ponsel */
     background: none;
     border: none;
-    color: black;
-    font-size: 24px;
+    color: black; /* Ubah warna ikon menjadi hitam */
+    font-size: 30px; /* Perbesar ukuran ikon hamburger */
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px;
   }
 }
+
 
 
