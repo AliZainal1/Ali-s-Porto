@@ -38,10 +38,10 @@ body {
 }
 
 .hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #ffffff;
-  margin: 5px 0;
+  width: 30px; /* Increase width */
+  height: 4px; /* Increase height */
+  background-color: #000000; /* Change to black for better contrast */
+  margin: 6px 0; /* Adjust spacing */
   transition: 0.4s;
 }
 
@@ -82,7 +82,7 @@ body {
 }
 
 .navbar-links span:hover {
-  color: #00ffcc; /* Change hover color to a more visible one */
+  color: #007bff;
   background-color: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -116,7 +116,7 @@ body {
   }
 
   .navbar-links span {
-    font-size: 1.1rem; /* Slightly larger font for tablets */
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
   }
 }
 
@@ -124,8 +124,7 @@ body {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 15px;
-    background-color: rgba(26, 4, 78, 0.95); /* Ensure navbar is visible */
+    padding: 15px; /* Increased padding for more space */
   }
 
   .hamburger {
@@ -138,11 +137,11 @@ body {
     gap: 20px;
     width: 100%;
     align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0.95); /* Darker background for better contrast */
+    background-color: rgba(26, 4, 78, 0.95); /* Slightly darker for better contrast */
     position: absolute;
     top: 60px;
     left: 0;
-    padding: 20px;
+    padding: 15px; /* Increased padding for better touch targets */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
@@ -152,16 +151,13 @@ body {
   }
 
   .navbar-links span {
-    font-size: 1.2rem; /* Larger font size for better visibility */
-    color: #fff; /* White color for better contrast */
-    padding: 15px 20px; /* Increased padding for easier clicking */
+    font-size: 1.2rem; /* Larger font size for better readability */
+    padding: 12px 20px; /* Increased padding for better touch targets */
     width: 100%;
     text-align: left;
-    background-color: rgba(0, 0, 0, 0.8); /* Darker background for links */
   }
 
   .navbar-links span:hover {
-    color: #00ffcc; /* Bright hover color for visibility */
     background-color: rgba(255, 255, 255, 0.2);
     transform: none;
   }
