@@ -184,7 +184,6 @@ button:hover {
 
   .linkedin-icon {
     width: 120px; /* Gunakan ukuran tetap untuk LinkedIn di ponsel */
-    height: 120px;
     height: auto; /* Pertahankan rasio aspek */
     object-fit: contain; /* Jaga agar seluruh gambar terlihat */
   }
@@ -198,6 +197,8 @@ button:hover {
   /* Modifikasi navbar di ponsel */
   .navbar {
     background-color: transparent; /* Hilangkan background di ponsel */
+    backdrop-filter: none; /* Hilangkan efek blur yang mungkin diterapkan dengan backdrop-filter */
+    filter: none; /* Pastikan tidak ada filter lain yang diterapkan */
   }
 
   .navbar.active {
@@ -216,3 +217,4 @@ button:hover {
     right: 10px;
   }
 }
+
