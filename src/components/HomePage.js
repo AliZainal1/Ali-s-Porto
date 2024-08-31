@@ -9,10 +9,6 @@ const HomePage = () => {
         <div className="hero-text-top">
           <h1>Ali Zainal Abidin</h1>
           <p>I am an enthusiast in Product and Project Management.</p>
-          {/* Button baru untuk Curriculum Vitae di bawah teks */}
-          <button className="cv-button" onClick={() => window.open('https://drive.google.com/drive/folders/1qIibZL-G0IH0sNOrEm4bwPG_UVj2G-sX?usp=sharing', '_blank')}>
-            Ali's Curriculum Vitae
-          </button>
         </div>
 
         <div className="hero-buttons">
@@ -20,6 +16,13 @@ const HomePage = () => {
             <img src="/linkedin-logo.png" alt="LinkedIn" className="linkedin-icon" />
           </a>
           <button onClick={() => window.location.href = '#contact'}>Contact Me</button>
+        </div>
+
+        {/* Button baru untuk Curriculum Vitae di bawah tombol LinkedIn dan Contact */}
+        <div className="cv-button-container">
+          <button className="cv-button" onClick={() => window.open('https://drive.google.com/drive/folders/1qIibZL-G0IH0sNOrEm4bwPG_UVj2G-sX?usp=sharing', '_blank')}>
+            Ali's Curriculum Vitae
+          </button>
         </div>
       </div>
     </div>

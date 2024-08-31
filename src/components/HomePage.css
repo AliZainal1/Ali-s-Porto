@@ -26,7 +26,7 @@
 
 .hero-text-top {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
@@ -34,32 +34,40 @@
   text-align: center;
 }
 
+.hero-buttons {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+}
+
+.cv-button-container {
+  position: absolute;
+  bottom: 15%; /* Posisikan tombol CV di bagian bawah */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* Tambahkan style untuk tombol CV */
 .cv-button {
-  margin-top: 20px; /* Jarak antara teks dan tombol */
-  padding: 12px 24px;
-  font-size: 1.1rem;
+  padding: 15px 40px;
+  font-size: 1.2rem;
   border-radius: 30px;
   border: 2px solid #fff;
-  background-color: #333; /* Latar belakang abu-abu gelap */
+  background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
   color: #fff; /* Warna teks putih */
   cursor: pointer;
+  margin-bottom: 120px;
   transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi untuk hover */
 }
+
 
 .cv-button:hover {
   background-color: #fff; /* Warna latar belakang putih pada hover */
   color: #333; /* Warna teks abu-abu gelap pada hover */
   border-color: #333; /* Border berubah menjadi abu-abu gelap pada hover */
-}
-
-.hero-buttons {
-  position: absolute;
-  bottom: 20%; /* Atur posisi lebih tinggi untuk menempatkan tombol di bagian bawah */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 20px;
 }
 
 .linkedin-icon {
@@ -108,6 +116,13 @@ button:hover {
     margin-top: 10px; /* Beri jarak atas untuk tombol */
   }
 
+  .cv-button-container {
+    position: static; /* Ubah dari absolute ke static */
+    transform: none; /* Hapus transform */
+    margin-top: 20px; /* Jarak atas untuk tombol CV */
+    text-align: center; /* Center tombol CV */
+  }
+
   .linkedin-icon {
     width: 30px;
     height: 30px;
@@ -136,6 +151,10 @@ button:hover {
 
   .hero-buttons {
     gap: 10px; /* Kurangi gap lebih kecil untuk ponsel */
+  }
+
+  .cv-button-container {
+    margin-top: 15px; /* Jarak atas untuk tombol CV */
   }
 
   button,
