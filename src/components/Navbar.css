@@ -144,4 +144,7 @@ body {
   .navbar-links span::after {
     display: none;
   }
+  html {
+    scroll-behavior: smooth;
+  }
 }

@@ -1,20 +1,20 @@
-// HomePage.js
 import React from 'react';
 import './HomePage.css';
 
-
 const HomePage = () => {
   return (
-    <div id="home" className="home-page"> {/* Tambahkan id="home" */}
+    <div id="home" className="home-page">
       <div className="hero-container">
         
-        {/* Bagian baru untuk nama dan deskripsi di kiri atas */}
         <div className="hero-text-top">
           <h1>Ali Zainal Abidin</h1>
           <p>I am an enthusiast in Product and Project Management.</p>
+          {/* Button baru untuk Curriculum Vitae di bawah teks */}
+          <button className="cv-button" onClick={() => window.open('https://drive.google.com/drive/folders/1qIibZL-G0IH0sNOrEm4bwPG_UVj2G-sX?usp=sharing', '_blank')}>
+            Ali's Curriculum Vitae
+          </button>
         </div>
 
-        {/* Bagian untuk button dan LinkedIn di tengah bawah */}
         <div className="hero-buttons">
           <a href="https://www.linkedin.com/in/zainalshahab" target="_blank" rel="noopener noreferrer">
             <img src="/linkedin-logo.png" alt="LinkedIn" className="linkedin-icon" />
