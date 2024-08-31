@@ -66,6 +66,7 @@
     gap: 15px;
     overflow: hidden;
     width: 100%;
+    justify-content: center;
 }
 
 .image-container {
@@ -101,9 +102,9 @@
     transform: scale(1.1);
 }
 
-/* Media Queries untuk Responsivitas */
+/* Media Queries for Responsiveness */
 
-/* Untuk tampilan tablet */
+/* For tablet view */
 @media (max-width: 768px) {
     .about-me {
         padding: 30px;
@@ -123,12 +124,12 @@
     }
 
     .photo-slider-container {
-        flex-direction: column; /* Susun vertikal di tablet */
+        flex-direction: row; /* Still horizontal but with smaller gap */
         padding: 15px;
     }
 }
 
-/* Untuk tampilan ponsel */
+/* For mobile view */
 @media (max-width: 480px) {
     .about-me {
         padding: 20px;
@@ -165,6 +166,6 @@
     }
 
     .slider-icon {
-        display: none; /* Hide navigation icons on mobile */
+        display: block; /* Keep navigation icons visible */
     }
 }
