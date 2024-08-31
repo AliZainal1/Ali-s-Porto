@@ -209,16 +209,16 @@ button:hover {
     background-color: #333; /* Munculkan background saat hamburger ditekan */
   }
 
-  .hamburger-menu {
-    display: block; /* Tampilkan tombol hamburger di ponsel */
-    background: none;
-    border: none;
-    color: black; /* Ubah warna ikon menjadi hitam */
-    font-size: 30px; /* Perbesar ukuran ikon hamburger */
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  .navbar .hamburger-menu {
+    display: block !important; /* Tampilkan tombol hamburger di ponsel */
+    background: none !important;
+    border: none !important;
+    color: black !important; /* Ubah warna ikon menjadi hitam */
+    font-size: 30px !important; /* Perbesar ukuran ikon hamburger */
+    cursor: pointer !important;
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
   }
 }
 
